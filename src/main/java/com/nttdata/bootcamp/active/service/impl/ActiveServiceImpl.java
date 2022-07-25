@@ -35,4 +35,9 @@ public class ActiveServiceImpl implements IActiveService {
 	public Mono<Active> findById(String id) {
 		return iActive.findById(id);
 	}
+	
+	@Override
+	public Mono<Void> deleteById(String id) {
+		return iActive.deleteById(id);
+	}
 }

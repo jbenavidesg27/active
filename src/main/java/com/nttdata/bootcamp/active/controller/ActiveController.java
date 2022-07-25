@@ -47,6 +47,19 @@ public class ActiveController {
 						.body(p));
 	}
 	
+	/*List Active for code person*/
+	@GetMapping("/delete/{id}")
+	public Mono<ResponseEntity<Void>> deleteById(@PathVariable("id") String id){
+		return activeService.findById(id)
+				.flatMap(x -> {
+					Mono<Void> delete = activeService.deleteById(id);
+					return delete;})
+				.map(x -> ResponseEntity.ok()
+						.contentType(MediaType.APPLICATION_JSON).
+						body(x))
+				.defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+	}
+	
 	/*Save Active*/
 	@PostMapping
 	public Mono<ResponseEntity<Active>> save(@RequestBody Active active, final ServerHttpRequest req){

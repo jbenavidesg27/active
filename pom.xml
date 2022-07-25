@@ -21,10 +21,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
 		</dependency>
-<<<<<<< HEAD
-=======
-		
->>>>>>> a718d450be575e8c051f923e42ddbdeaf415e3e4
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
