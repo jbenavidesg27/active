@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "45ab667a-cee6-436e-a92b-927ba1426860",
+		"name": "Active",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21908330"
+	},
+	"item": [
+		{
+			"name": "FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/active",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"credit\":{\r\n        \"codeCredit\":\"01\",\r\n        \"nameCredit\":\"Credito Personal\"\r\n    },\r\n    \"creditAmount\":\"2000.00\",\r\n    \"codePerson\":\"1\",\r\n    \"creditDate\":\"2022-07-25\",\r\n    \"period\":\"6 meses\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/active",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/active/000001",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"active",
+						"000001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/active/delete/62df1fa078b13c74909bc865",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"active",
+						"delete",
+						"62df1fa078b13c74909bc865"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"credit\":{\r\n        \"codeCredit\":\"01\",\r\n        \"nameCredit\":\"Credito Personal\"\r\n    },\r\n    \"creditAmount\":\"5000.00\",\r\n    \"codePerson\":\"1\",\r\n    \"creditDate\":\"2022-07-25\",\r\n    \"period\":\"6 meses\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/active/62df1fa078b13c74909bc865",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"active",
+						"62df1fa078b13c74909bc865"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
