@@ -47,7 +47,7 @@ public class ActiveController {
 						.body(p));
 	}
 	
-	/*List Active for code person*/
+	/*Delete for Id*/
 	@GetMapping("/delete/{id}")
 	public Mono<ResponseEntity<Void>> deleteById(@PathVariable("id") String id){
 		return activeService.findById(id)
