@@ -2,6 +2,7 @@ package com.nttdata.bootcamp.active.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -24,7 +25,8 @@ public class Active {
 	@Id
 	private String id;
 	
-	private Credit credit;
+	/*Puede ser "Prestamo Personal, Prestamo Empresarial y Tarjeta de Credito"*/
+	private List<Credit> credit;
 	
 	private BigDecimal creditAmount;
 	
