@@ -16,30 +16,30 @@ import reactor.core.publisher.Mono;
 public class ActiveServiceImpl implements ActiveService {
   
   @Autowired
-  ActiveDao iActive;
+  ActiveDao activeDao;
 
   @Override
   public Mono<Active> save(Active active) {
-    return iActive.save(active);
+    return activeDao.save(active);
   }
   
   @Override
   public Mono<Active> update(Active active) {
-    return iActive.save(active);
+    return activeDao.save(active);
   }
 
   @Override
   public Flux<Active> findAll() {
-    return iActive.findAll();
+    return activeDao.findAll();
   }
 
   @Override
   public Mono<Active> findById(String id) {
-    return iActive.findById(id);
+    return activeDao.findById(id);
   }
   
   @Override
   public Mono<Void> deleteById(String id) {
-    return iActive.deleteById(id);
+    return activeDao.deleteById(id);
   }
 }

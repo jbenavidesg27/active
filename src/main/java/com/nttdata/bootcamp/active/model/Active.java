@@ -12,7 +12,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 
 /**
- * Getter and Setter.
+ * Data -> Getter, Setter and Constructor.
+ * Document -> NON-RELATIONAL DATABASE.
  *
  */
 @Data

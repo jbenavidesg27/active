@@ -4,7 +4,7 @@ import com.nttdata.bootcamp.active.model.Active;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
 /**
- * DAO connect Mongo.
+ * DAO Active connect Mongo.
  *
  */
 public interface ActiveDao extends ReactiveMongoRepository<Active, String> {
