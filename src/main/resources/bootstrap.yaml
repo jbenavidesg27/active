@@ -1,0 +1,18 @@
+server:
+  port: 8091
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/activedb
+  cloud:
+    config:
+      name: active-service
+      discovery:
+        enabled: true
+        service-id: config
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
