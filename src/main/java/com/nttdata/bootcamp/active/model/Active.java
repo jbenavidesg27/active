@@ -26,7 +26,6 @@ public class Active {
   @Id
   private String id;
   
-  /*Puede ser "Prestamo Personal, Prestamo Empresarial y Tarjeta de Credito"*/
   private List<Credit> credit;
   
   private BigDecimal creditAmount;
