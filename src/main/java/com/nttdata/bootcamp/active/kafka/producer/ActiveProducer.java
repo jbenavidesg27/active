@@ -23,7 +23,7 @@ public class ActiveProducer {
 
   public void sendMessage(String message) {
     log.info("Producing message {}", message);
-    this.kafkaTemplate.send("passive-topic", message);
+    this.kafkaTemplate.send("active-topic", message);
   }
 
 }

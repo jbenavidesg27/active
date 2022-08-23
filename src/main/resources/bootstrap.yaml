@@ -4,6 +4,13 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/activedb
+  kafka:
+     consumer:
+#        bootstrap-servers: 192.168.1.14:9092
+        #group-id: fooGroup2
+        auto-offset-reset: earliest
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
   cloud:
     config:
       name: active-service
