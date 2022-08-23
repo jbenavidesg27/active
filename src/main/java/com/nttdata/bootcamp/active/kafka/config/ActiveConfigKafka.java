@@ -1,6 +1,5 @@
-package com.nttdata.bootcamp.active.config;
+package com.nttdata.bootcamp.active.kafka.config;
 
-import com.nttdata.bootcamp.active.events.Event;
 import java.util.HashMap;
 import java.util.Map;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -17,7 +16,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
  *
  */
 @Configuration
-public class KafkaProducerConfig {
+public class ActiveConfigKafka {
   
   private final String bootstrapAddress = "localhost:9092";
   
@@ -25,7 +24,7 @@ public class KafkaProducerConfig {
    * Bean.
    */
   @Bean
-  public ProducerFactory<String, Event<?>> producerFactory() {
+  public ProducerFactory<String, String> producerFactory() {
     Map<String, Object> configProps = new HashMap<>();
     configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapAddress);
     configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
@@ -33,8 +32,8 @@ public class KafkaProducerConfig {
     return new DefaultKafkaProducerFactory<>(configProps);
   }
 
-  @Bean
-  public KafkaTemplate<String, Event<?>> kafkaTemplate() {
+  @Bean(name = "kafkaStringTemplate")
+  KafkaTemplate<String, String> kafkaTemplate() {
     return new KafkaTemplate<>(producerFactory());
   }
 }
